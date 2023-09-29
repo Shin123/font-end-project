@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Pretendard';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f8f8f9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9e0e8;
+  border-radius: 4px;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-sm/[17px] outline-none sm:border-none bg-neutral-7;
+  }
+
+  .input:focus {
+    @apply bg-neutral-8;
+  }
+}
